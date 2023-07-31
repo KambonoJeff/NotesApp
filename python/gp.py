@@ -4,9 +4,8 @@ import subprocess
 cmd_command = "git add ."
 cmd_command1 = " git commit -a -m \"python testing\" "
 cmd_command2 = "git push -u origin"
-
-# Use the subprocess.run() function to execute the command.
-# By default, this will run the command in the cmd and wait for it to complete.
+def deploy():
+    pass
 try:
     completed_process = subprocess.run(cmd_command, shell=True, check=True, text=True)
 
@@ -36,10 +35,6 @@ try:
     # If you want to capture the output of the command, you can access it using completed_process.stdout.
     # For example, you can print the output:
     print("Command output:")
-    print(completed_process.stdout)
-    print(completed_process1.stdout)
-    print(completed_process2.stdout)
-
 except subprocess.CalledProcessError as e:
     # If the command returns a non-zero exit code, the subprocess.CalledProcessError exception will be raised.
     print(f"Command failed with exit code: {e.returncode}")
