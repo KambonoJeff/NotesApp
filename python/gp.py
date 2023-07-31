@@ -16,11 +16,27 @@ def deploy():
 
     if completed_process:
         print("FIRST process completed")
-        print("Current Time:", current_time.strftime("%Y-%m-%d %H:%M:%S"))
+
+        time = print("Current Time:\n",current_time.strftime("%Y-%m-%d %H:%M:%S") )
+        time
+        time
+        time
+        time
+        time
+        time
+        time
 
     else:
         print(" FIRST NOT COMPLETED!!!!")
-        print("Current Time:", current_time.strftime("%Y-%m-%d %H:%M:%S"))
+        
+        time = print("Current Time:\n",current_time.strftime("%Y-%m-%d %H:%M:%S") )
+        time
+        time
+        time
+        time
+        time
+        time
+        time
 
     completed_process1 = subprocess.run(cmd_command1, shell=True, check=True, text=True)
     
@@ -39,6 +55,7 @@ def deploy():
         print("Current Time:", current_time.strftime("%Y-%m-%d %H:%M:%S"))
 
     print("SUCCESSFULLY PUSHED ALL FILES :")
+    exit()
 
 def get_user_input():
     return input("ENTER THE NUMBER OF COMMITS: ")
