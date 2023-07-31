@@ -71,7 +71,7 @@ def rounds():
         min_time = 60
         max_time = 360
         sleep_time =random.randint(min_time,max_time)
-        
+
         for _ in range(number):
             formation()
             time.sleep(sleep_time)
