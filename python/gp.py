@@ -39,7 +39,6 @@ try:
     print(completed_process.stdout)
     print(completed_process1.stdout)
     print(completed_process2.stdout)
-    print(completed_process3.stdout)
 
 except subprocess.CalledProcessError as e:
     # If the command returns a non-zero exit code, the subprocess.CalledProcessError exception will be raised.
