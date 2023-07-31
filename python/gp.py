@@ -4,7 +4,7 @@ import string
 
 
 # Replace "your_command_here" with the actual command you want to run in the cmd.
-cmd_command = "git add gp.py"
+cmd_command = "git add ."
 cmd_command1 = " git commit -a -m \"python testing\" "
 cmd_command2 = "git push -u origin"
 
