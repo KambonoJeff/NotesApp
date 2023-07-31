@@ -1,7 +1,7 @@
 import subprocess
 import random
 import string
-
+import time
 
 # Replace "your_command_here" with the actual command you want to run in the cmd.
 cmd_command = "git add ."
@@ -67,8 +67,14 @@ def rounds():
         if number > 20:
             print("The number is greater than 20 enter less commits")
             get_user_input()
+
+        min_time = 60
+        max_time = 360
+        sleep_time =random.randint(min_time,max_time)
+        
         for _ in range(number):
             formation()
+            time.sleep(sleep_time)
 
     except ValueError:
         print("NOT AN INTEGER!!!")
