@@ -3,10 +3,9 @@ import random
 import string
 import time
 
-# Replace "your_command_here" with the actual command you want to run in the cmd.
-cmd_command = "git add ."
-cmd_command1 = " git commit -a -m \"python testing\" "
-cmd_command2 = "git push -u origin"
+cmd_command ,
+cmd_command1,
+cmd_command2 ,
 
 def deploy():
     
