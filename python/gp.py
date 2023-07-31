@@ -50,7 +50,7 @@ def text_generator_a():
         file.write(random_string)
 def text_generator_w():
     with open("test.txt", "w") as file:
-        random_string = ' \n'.join(random.choices(string.ascii_letters, k=20))
+        random_string = ' \n'.join(random.choices(string.ascii_letters, k=2000))
         print(random_string)
         file.write(random_string)
 
@@ -60,7 +60,7 @@ def randomFunc():
     executeThis()
 
 def formation():
-    text_generator_a()
+    text_generator_w()
     deploy()
 
 def rounds():
