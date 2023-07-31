@@ -2,10 +2,13 @@ import subprocess
 import random
 import string
 import time
+from datetime import datetime
 
-cmd_command ,
-cmd_command1,
-cmd_command2 ,
+cmd_command = " git add ."
+cmd_command1 = " git commit -a -m \"python testing\" "
+cmd_command2 = "git push -u origin"
+
+current_time = datetime.now()
 
 def deploy():
     
@@ -13,24 +16,29 @@ def deploy():
 
     if completed_process:
         print("FIRST process completed")
+        print("Current Time:", current_time.strftime("%Y-%m-%d %H:%M:%S"))
+
     else:
         print(" FIRST NOT COMPLETED!!!!")
+        print("Current Time:", current_time.strftime("%Y-%m-%d %H:%M:%S"))
 
     completed_process1 = subprocess.run(cmd_command1, shell=True, check=True, text=True)
     
     if completed_process1:
-            print("SECOND process completed")
+        print("SECOND process completed")
+        print("Current Time:", current_time.strftime("%Y-%m-%d %H:%M:%S"))
     else:
         print(" SECOND NOT COMPLETED!!!!")
-            
+        print("Current Time:", current_time.strftime("%Y-%m-%d %H:%M:%S"))            
     completed_process2 = subprocess.run(cmd_command2, shell=True, check=True, text=True)
     if completed_process2:
         print("THIRD process completed")
-
+        print("Current Time:", current_time.strftime("%Y-%m-%d %H:%M:%S"))
     else:
-
         print(" THIRD NOT COMPLETED!!!!")
-        print("SUCCESSFULLY PUSHED ALL FILES :")
+        print("Current Time:", current_time.strftime("%Y-%m-%d %H:%M:%S"))
+
+    print("SUCCESSFULLY PUSHED ALL FILES :")
 
 def get_user_input():
     return input("ENTER THE NUMBER OF COMMITS: ")
@@ -86,4 +94,4 @@ try:
 
 except subprocess.CalledProcessError as e:
     print(f"Command failed with exit code: {e.returncode}")
-    print(f"Error message: {e.stderr}")
+    print(f"Error message LEVEL 0NE ALERT : {e.stderr}")
